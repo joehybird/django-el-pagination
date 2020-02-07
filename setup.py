@@ -1,5 +1,6 @@
 import os
-from distutils.core import setup
+
+from setuptools import setup
 
 PROJECT_NAME = 'el_pagination'
 ROOT = os.path.abspath(os.path.dirname(__file__))
@@ -7,7 +8,7 @@ VENV = os.path.join(ROOT, '.venv')
 VENV_LINK = os.path.join(VENV, 'local')
 
 install_requires = [
-    'django>=1.8.0',
+    'django>=1.11.0',
 ]
 
 project = __import__(PROJECT_NAME)
@@ -52,7 +53,7 @@ class VenvLinkDeleted(object):
 with VenvLinkDeleted():
     setup(
         name='django-el-pagination',
-        version=project.get_version(),
+        version=project.get_version() + '+peopledoc',
         description=(
             "Django pagination tools supporting Ajax, multiple and lazy "
             "pagination, Twitter-style and Digg-style pagination."
@@ -74,13 +75,17 @@ with VenvLinkDeleted():
             'Development Status :: 5 - Production/Stable',
             'Environment :: Web Environment',
             'Framework :: Django',
+            'Framework :: Django :: 1.11',
+            'Framework :: Django :: 2.2',
+            'Framework :: Django :: 3.0',
             'Intended Audience :: Developers',
             'License :: OSI Approved :: MIT License',
             'Operating System :: OS Independent',
             'Programming Language :: Python',
-            'Programming Language :: Python :: 2.7',
             'Programming Language :: Python :: 3',
-            'Programming Language :: Python :: 3.4',
+            'Programming Language :: Python :: 3.5',
+            'Programming Language :: Python :: 3.6',
+            'Programming Language :: Python :: 3.8',
             'Topic :: Utilities',
         ],
         install_requires=install_requires,

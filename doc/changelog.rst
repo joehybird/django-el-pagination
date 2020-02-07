@@ -1,13 +1,16 @@
 Changelog
 =========
 
-
-Version 3.3.0
-~~~~~~~~~~~~~
+Version 3.2.5+peopledoc
+~~~~~~~~~~~~~~~~~~~~~~~
+Local release https://github.com/joehybird/django-el-pagination/tree/release/3.2.5%2Bpeopledoc
 
 **New feature**: Django 3.0.x support.
     Django EL(Endless) Pagination now supports Django from 1.11.x to 3.0.x
     Dropped support for Python 2.x 
+
+**Fix**: Fix CI integration tests
+**Cleanup**: Code cleanup and linting
 
 Version 3.2.4
 ~~~~~~~~~~~~~
